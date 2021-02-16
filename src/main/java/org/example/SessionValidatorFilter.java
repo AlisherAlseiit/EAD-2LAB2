@@ -21,7 +21,7 @@ public class SessionValidatorFilter implements Filter {
         PrintWriter out=resp.getWriter();
         HttpSession session = httpRequest.getSession();
 
-        if(!session.getAttribute("imitation").equals("") || session.getAttribute("imitation").equals(null)){
+        if(session.getAttribute("imitation").equals("") || session.getAttribute("imitation").equals(null)){
             out.print("no session attribute");
             RequestDispatcher rd=req.getRequestDispatcher("index.html");
             rd.include(req, resp);
