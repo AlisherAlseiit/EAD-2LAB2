@@ -8,11 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>login</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<form class="register" action="MainPage" method="GET">
+<form class="register" action="MainPageServlet" method="GET">
 
     <input type="email" class="register-input" placeholder="Email address" name="email" required="true">
     <input type="password" class="register-input" placeholder="Password" name="password" required="true">

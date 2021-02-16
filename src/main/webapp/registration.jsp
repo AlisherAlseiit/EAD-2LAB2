@@ -10,11 +10,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>registration</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<form class="register" action="MainPage" method="GET">
+<form class="register" action="MainPageServlet" method="GET">
         <div class="register-switch" required = "true">
             <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
             <label for="sex_f" class="register-switch-label">Female</label>

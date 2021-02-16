@@ -5,6 +5,45 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>MainPageServlet</servlet-name>
+    <servlet-class>org.example.MainPageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>MainPageServlet</servlet-name>
+    <url-pattern>/MainPageServlet</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>loggerFilter</filter-name>
+    <filter-class>org.example.LoggerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>loggerFilter</filter-name>
+    <url-pattern>/MainPageServlet</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>sessionValidator</filter-name>
+    <filter-class>org.example.SessionValidatorFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>sessionValidator</filter-name>
+    <url-pattern>/MainPageServlet</url-pattern>
+  </filter-mapping>
+
+
+  <filter>
+    <filter-name>cookieTimeFilter</filter-name>
+    <filter-class>org.example.CookieTimeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>cookieTimeFilter</filter-name>
+    <url-pattern>/MainPageServlet</url-pattern>
+  </filter-mapping>
+
+
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.css</url-pattern>
@@ -13,4 +52,5 @@
     <servlet-name>default</servlet-name>
     <url-pattern>*.js</url-pattern>
   </servlet-mapping>
+
 </web-app>
